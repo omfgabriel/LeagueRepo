@@ -20,7 +20,7 @@ namespace OneKeyToWin_AIO_Sebby.Champions
         public void LoadOKTW()
         {
             Q = new Spell(SpellSlot.Q, 790);
-            W = new Spell(SpellSlot.W, 950);
+            W = new Spell(SpellSlot.W, 925);
             E = new Spell(SpellSlot.E, 700);
             EQ = new Spell(SpellSlot.Q, Q.Range + 500);
             Eany = new Spell(SpellSlot.Q, Q.Range + 500);
@@ -28,8 +28,8 @@ namespace OneKeyToWin_AIO_Sebby.Champions
 
             Q.SetSkillshot(0.6f, 125f, float.MaxValue, false, SkillshotType.SkillshotCircle);
             W.SetSkillshot(0.25f, 140f, 1600f, false, SkillshotType.SkillshotCircle);
-            E.SetSkillshot(0.25f, 100, 2500f, false, SkillshotType.SkillshotLine);
-            EQ.SetSkillshot(0.6f, 100f, 2500f, false, SkillshotType.SkillshotLine);
+            E.SetSkillshot(0.25f, (float)(45 * 0.5), 2500f, false, SkillshotType.SkillshotCircle);
+            Eq.SetSkillshot(float.MaxValue, 55f, 2000f, false, SkillshotType.SkillshotCircle);
             Eany.SetSkillshot(0.30f, 50f, 2500f, false, SkillshotType.SkillshotLine);
 
             Config.SubMenu(Player.ChampionName).SubMenu("Draw").AddItem(new MenuItem("qRange", "Q range", true).SetValue(false));
